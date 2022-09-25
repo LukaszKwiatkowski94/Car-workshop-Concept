@@ -1,15 +1,20 @@
 <template>
 	<HeroImage :mainText="nameWebsite" />
-    <ContactSection/>
+    <main>
+        <AboutSection/>
+        <ContactSection/>
+    </main>
 </template>
 
 <script>
 import HeroImage from '@/components/HeroImage.vue'
+import AboutSection from '@/components/AboutSection.vue'
 import ContactSection from '@/components/ContactSection.vue'
 export default {
     name: "MainPage",
     components:{
         HeroImage,
+        AboutSection,
         ContactSection,
     },
     data(){
