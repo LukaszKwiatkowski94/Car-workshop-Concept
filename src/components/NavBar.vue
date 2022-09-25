@@ -4,7 +4,7 @@
 			<img src="@/assets/logo.png" />
 			<p class="nav__title">Car Workshop</p>
 		</div>
-		<div v-show="navMenuIsOpen || windowWidth >= 900" class="nav__items">
+		<div v-show="navMenuIsOpen || windowWidth > 900" class="nav__items">
 			<NavBarItem :item="{ title: 'Home', to: '/' }" />
 			<NavBarItem :item="{ title: 'Car repair', to: '/car-repair' }" />
 			<NavBarItem :item="{ title: 'Vulcanization', to: '/vulcanization' }" />
@@ -42,9 +42,12 @@ export default {
 		};
 	},
 	mounted() {
-		window.onResize = () => {
+		window.addEventListener('resize', this.onResize);
+	},
+	methods: {
+		onResize(){
 			this.windowWidth = window.innerWidth;
-		};
+		},
 	},
 };
 </script>
