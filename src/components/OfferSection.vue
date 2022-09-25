@@ -15,7 +15,7 @@
 				<h3 class="offer__item-header">Vulcanization</h3>
 				<CustomButton
 					class="offer__btn"
-					:item="{ title: 'Go to offer', to: '/car-wash' }"
+					:item="{ title: 'Go to offer', to: '/vulcanization' }"
 				/>
 			</div>
 			<div class="offer__item">
@@ -23,7 +23,7 @@
 				<h3 class="offer__item-header">Car wash</h3>
 				<CustomButton
 					class="offer__btn"
-					:item="{ title: 'Go to offer', to: '/vulcanization' }"
+					:item="{ title: 'Go to offer', to: '/car-wash' }"
 				/>
 			</div>
 		</div>
