@@ -14,4 +14,12 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.hero-image{
+    $hero-linear-gradient : linear-gradient(90deg, rgba(39,123,192,0.5) 50%, rgba(39,123,192,0.5) 50%);
+    min-height: 100vh;
+    background-image: $hero-linear-gradient, url('../assets/hero-header-mini.jpg');
+    background-position: center;
+	background-size: cover;
+}
+</style>
