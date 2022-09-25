@@ -5,22 +5,38 @@
 			<div class="offer__item">
 				<img src="../assets/repair.jpg" alt="repair car" class="offer__logo" />
 				<h3 class="offer__item-header">Car repair</h3>
+				<CustomButton
+					class="offer__btn"
+					:item="{ title: 'Go to offer', to: '/car-repair' }"
+				/>
 			</div>
 			<div class="offer__item">
 				<img src="../assets/tires.jpg" alt="tires" class="offer__logo" />
 				<h3 class="offer__item-header">Vulcanization</h3>
+				<CustomButton
+					class="offer__btn"
+					:item="{ title: 'Go to offer', to: '/car-wash' }"
+				/>
 			</div>
 			<div class="offer__item">
 				<img src="../assets/wash.jpg" alt="wash car" class="offer__logo" />
 				<h3 class="offer__item-header">Car wash</h3>
+				<CustomButton
+					class="offer__btn"
+					:item="{ title: 'Go to offer', to: '/vulcanization' }"
+				/>
 			</div>
 		</div>
 	</section>
 </template>
 
 <script>
+import CustomButton from "@/components/CustomButton.vue";
 export default {
 	name: "OfferSection",
+	components: {
+		CustomButton,
+	},
 };
 </script>
 
@@ -60,6 +76,9 @@ $hero-linear-gradient: linear-gradient(
 	&__item-header {
 		margin: 1em auto 0.5em;
 		font-size: 3.2rem;
+	}
+	&__btn {
+		margin-bottom: 1.5em;
 	}
 }
 @media (min-width: 768px) {
