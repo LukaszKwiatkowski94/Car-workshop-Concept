@@ -127,6 +127,7 @@ export default {
 		position: relative;
 		bottom: 0;
 		min-height: 60px;
+		font-size: 1.8rem;
 		background-color: #ffb200;
 	}
 }
