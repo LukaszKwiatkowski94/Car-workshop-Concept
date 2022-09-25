@@ -1,7 +1,8 @@
 <template>
 	<footer class="footer">
-		<div class="wrapper">
-			<p class="footer__year">&copy; {{ year }} Car workshop</p>
+		<div class="footer__info-box"></div>
+		<div class="footer__year-box">
+			<p class="footer__year-text">&copy; {{ year }} Car Workshop</p>
 		</div>
 	</footer>
 </template>
@@ -19,16 +20,22 @@ export default {
 
 <style lang="scss" scoped>
 .footer {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	position: relative;
-	bottom: 0;
 	width: 100%;
-	min-height: 60px;
-	background-color: #90b77d;
-	color: #483838;
-	&__year {
+	&__info-box {
+		background-color: #FFCB42;
+		min-height: 60vh;
+	}
+	&__year-box {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		bottom: 0;
+		min-height: 60px;
+		background-color: #ffb200;
+	}
+
+	&__year-text {
 		font-size: 1.6rem;
 	}
 }
