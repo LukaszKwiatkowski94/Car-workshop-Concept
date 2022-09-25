@@ -1,14 +1,16 @@
 <template>
 	<HeroImage :mainText="nameWebsite" />
-    <div style="min-height:100vh;"></div>
+    <ContactSection/>
 </template>
 
 <script>
 import HeroImage from '@/components/HeroImage.vue'
+import ContactSection from '@/components/ContactSection.vue'
 export default {
     name: "MainPage",
     components:{
-        HeroImage
+        HeroImage,
+        ContactSection,
     },
     data(){
         return{

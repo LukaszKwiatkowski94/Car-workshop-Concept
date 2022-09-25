@@ -23,7 +23,7 @@
 						<li class="footer__list-item footer__list-item--address">
 							<address>
 								<p>Car Workshop</p>
-								<p>Main Road 44</p>
+								<p>Millbank 44</p>
 								<p>00-000 London</p>
 							</address>
 						</li>
