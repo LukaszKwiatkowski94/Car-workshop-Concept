@@ -1,7 +1,5 @@
 <template>
-  <div class="home">
-    <MainPage />
-  </div>
+  <MainPage />
 </template>
 
 <script>
@@ -12,6 +10,9 @@ export default {
   name: 'HomeView',
   components: {
     MainPage
-  }
+  },
+  mounted() {
+		window.scrollTo(0, 0);
+	},
 }
 </script>

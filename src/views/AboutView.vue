@@ -11,5 +11,8 @@ export default {
 	components: {
 		AboutSection,
 	},
+	mounted() {
+		window.scrollTo(0, 0);
+	},
 };
 </script>
