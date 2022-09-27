@@ -4,6 +4,7 @@ import CarRepairView from '../views/CarRepairView.vue'
 import CarWashView from '../views/CarWashView.vue'
 import VulcanizationView from '../views/VulcanizationView.vue'
 import ContactView from '../views/ContactView.vue'
+import PageNotFound from '../views/PageNotFound.vue'
 
 const routes = [
   {
@@ -38,6 +39,11 @@ const routes = [
     path: '/contact',
     name: 'contact',
     component: ContactView
+  },
+  {
+    path: '/:catchAll(.*)',
+    name: 'NotFoundPage',
+    component: PageNotFound,
   },
 ]
 
