@@ -3,15 +3,15 @@
 		<h2 class="section__header">Contact</h2>
 		<div class="contact__box">
 			<div class="contact__form">
-				<form>
+				<form @submit.prevent="submitMessage">
 					<label for="name" class="contact__label">Your name:</label>
-					<input type="text" name="name" class="contact__input" />
+					<input type="text" v-model="name" name="name" class="contact__input" placeholder="Please enter your name" required/>
 					<label for="surname" class="contact__label">Your surname:</label>
-					<input type="text" name="surname" class="contact__input" />
+					<input type="text" v-model="surname" name="surname" class="contact__input" placeholder="Please enter your last name" required/>
 					<label for="email" class="contact__label">Your e-mail:</label>
-					<input type="mail" name="email" class="contact__input" />
+					<input type="mail" v-model="mail" name="email" class="contact__input"  placeholder="Please enter your e-mail address" required/>
 					<label for="message" class="contact__label">Your message:</label>
-					<textarea class="contact__textarea" />
+					<textarea v-model="message" class="contact__textarea"  placeholder="Write your message" required/>
 					<button type="submit" class="contact__btn">SEND</button>
 				</form>
 			</div>
@@ -42,6 +42,23 @@
 <script>
 export default {
 	name: "ContactSection",
+	data(){
+		return{
+			name:"",
+			surname:"",
+			mail:"",
+			message:""
+		}
+	},
+	methods:{
+		submitMessage(){
+			alert(`${this.name} ${this.surname} your message was sent successfully. Wait for a reply on ${this.mail}`);
+			this.name="";
+			this.surname="";
+			this.mail="";
+			this.message="";
+		}
+	},
 };
 </script>
 
@@ -86,6 +103,7 @@ export default {
         border-radius: 1em;
         background-color: #FFCB42;
         color: #277bc0;
+		cursor: pointer;
     }
 	&__map {
 		display: flex;
