@@ -47,9 +47,17 @@ html {
 	max-width: 1200px;
 	&__header {
 		margin: 1em auto;
-		font-size: 4.2rem;
+		font-size: 3.6rem;
 		text-transform: uppercase;
 		letter-spacing: 4px;
+		word-wrap: break-word;
+	}
+}
+@media(min-width: 769px){
+	.section{
+		&__header{
+			font-size: 4.2rem;
+		}
 	}
 }
 </style>
