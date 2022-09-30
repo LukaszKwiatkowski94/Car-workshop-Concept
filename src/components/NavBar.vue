@@ -5,11 +5,26 @@
 			<p class="nav__title">Car Workshop</p>
 		</div>
 		<div v-show="navMenuIsOpen || windowWidth > 900" class="nav__items">
-			<NavBarItem :item="{ title: 'Home', to: '/' }" />
-			<NavBarItem :item="{ title: 'Car repair', to: '/car-repair' }" />
-			<NavBarItem :item="{ title: 'Vulcanization', to: '/vulcanization' }" />
-			<NavBarItem :item="{ title: 'Car wash', to: '/car-wash' }" />
-			<NavBarItem :item="{ title: 'Contact', to: '/contact' }" />
+			<NavBarItem
+				:item="{ title: 'Home', to: '/' }"
+				@click="navMenuIsOpen = false"
+			/>
+			<NavBarItem
+				:item="{ title: 'Car repair', to: '/car-repair' }"
+				@click="navMenuIsOpen = false"
+			/>
+			<NavBarItem
+				:item="{ title: 'Vulcanization', to: '/vulcanization' }"
+				@click="navMenuIsOpen = false"
+			/>
+			<NavBarItem
+				:item="{ title: 'Car wash', to: '/car-wash' }"
+				@click="navMenuIsOpen = false"
+			/>
+			<NavBarItem
+				:item="{ title: 'Contact', to: '/contact' }"
+				@click="navMenuIsOpen = false"
+			/>
 		</div>
 		<img
 			class="nav__menu-bars"
@@ -42,10 +57,10 @@ export default {
 		};
 	},
 	mounted() {
-		window.addEventListener('resize', this.onResize);
+		window.addEventListener("resize", this.onResize);
 	},
 	methods: {
-		onResize(){
+		onResize() {
 			this.windowWidth = window.innerWidth;
 		},
 	},
